@@ -11,5 +11,5 @@ Displays a window to contact the developer when a mod crashes Minecraft.
    See src/main/java/xyz/fmdc/reportsender/properties/ReportSender.properties.sample file for the format. Add the number of destinations.
 
 
-This program uses Crash Report Publisher, a library developed by anatawa12. licensed under MIT License
+This program uses Crash Report Publisher, a program developed by anatawa12. licensed under MIT License
 see licenses/LICENSE-crash-report-publisher.txt
