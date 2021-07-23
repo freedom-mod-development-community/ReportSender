@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  * @author noyciy7037
  */
 public class Downloader implements ITweaker {
-    public static final String latestFileLinkFileURL = "THE LINK FOR LatestModUrl.txt IS HERE";
+    public static final String latestFileLinkFileURL = "https://raw.githubusercontent.com/freedom-mod-development-community/ReportSender/master/LatestModUrl.txt";
     private Downloading downloadWindow;
     private boolean downloaded;
     private File downloadedFile;

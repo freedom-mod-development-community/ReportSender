@@ -1,0 +1,2 @@
+1.0.0
+https://github.com/freedom-mod-development-community/ReportSender/releases/download/1.0.0/ReportSender-1.0.0.jar
