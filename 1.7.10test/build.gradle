@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "https://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+            changing = true
+        }
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: 'forge'
+
+minecraft {
+    version = "1.7.10-10.13.4.1558-1.7.10"
+    runDir = "run"
+}
+
+group 'xyz.fmdc'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+build.enabled  = false
+
+runClient {
+    args '--tweakClass', 'xyz.fmdc.reportsender.downloader.Downloader', "-verbose:class"
+    jvmArgs += ['-Dlegacy.debugClassLoading=true', '-Dlegacy.debugClassLoadingSave=true']
+}
+
+dependencies {
+    implementation project(path: ':SenderDownloader', configuration: 'default')
+    implementation project(path: rootProject.path, configuration: 'default')
+    //implementation project(path: '.', configuration: 'default')
+    //implementation fileTree(dir: 'run/mods/reportsender', include: ['ReportSender-1.0.0.jar'])
+}

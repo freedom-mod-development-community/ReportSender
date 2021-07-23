@@ -1,0 +1,13 @@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@ReportSender Webhook Setting File@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#name: A unique identifier for this mod only. ModId is recommended.
+#developer-name: Developer name. Display only.
+#description: Mod and developer description. Display only.
+#webhook-url: URL of the webhook for sending the report
+#rsa-public-key: Public key for RSA encryption.
+name=ReportSender
+developer-name=noyciy7037, FMDC
+description=Crush report sender. https://fmdc.xyz/
+webhook-url=https://example.com/index.php
+rsa-public-key=-----BEGIN PUBLIC KEY-----\n0123456789abcdefghijklmnopqrstuvexyz\n0123456789abcdefghijklmnopqrstuvexyz\n-----END PUBLIC KEY-----

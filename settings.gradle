@@ -1,0 +1,3 @@
+rootProject.name = 'ReportSender'
+include 'SenderDownloader', '1.7.10test'
+

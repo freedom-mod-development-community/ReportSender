@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'xyz.fmdc'
+version "$VERSION"
+
+def tweakClass = "xyz.fmdc.reportsender.downloader.Downloader"
+
+repositories {
+    mavenCentral()
+    maven { url = "https://libraries.minecraft.net/" }
+}
+
+dependencies {
+    implementation "net.minecraft:launchwrapper:1.12"
+    implementation "org.ow2.asm:asm:4.0"
+}
+
+java {
+    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+    manifest {
+        attributes TweakClass: tweakClass
+        attributes TweakOrder: 1001
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+}
